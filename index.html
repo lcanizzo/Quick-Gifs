@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Positive Gifs!</title>
+    <title>Positive Gifs</title>
     <!-- jQuery & jQuery UI -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -35,18 +35,21 @@
         <ul class="nav flex-column nav-pills">
             <li class="nav-item rec-box"></li>
         </ul>
+        <h3>Recent Searches</h3>
+        <ul class="nav flex-column nav-pills">
+            <li class="nav-item search-box"></li>
+        </ul>
     </div>
 
 <!-- Working still -->
     <div class="container page-body">
         <div class="row">
             <div class="col content">
-                <h2>Search For Gifs!</h2>
                 <div id="gif-box"></div>
             </div>
 
-            <div class="col-2 searches-box">
-                <h2>[search box]</h2>
+            <div class="col-3 input-box">
+                <input id="search" class="form-control form-control-lg" type="text" placeholder="Search For Gifs!">                    
             </div>
         </div>
     </div>

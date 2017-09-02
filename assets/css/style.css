@@ -1,11 +1,20 @@
 .rec-container {
     max-width: 250px;
     float: left;
+    text-align: center;
 }
-
-.rec-btn {
+ 
+.gif-btn {
     font-size: 20px;
     width: 100%;
 
     margin-top: 10px;
+} 
+
+.page-body {
+    margin: 15px 0 10px 250px;
 }
+
+.input-box {
+    padding: 0;
+}  
