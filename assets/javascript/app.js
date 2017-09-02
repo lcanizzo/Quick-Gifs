@@ -6,7 +6,7 @@ var limit = 20;                                         //  U P D A T E    T O  
 // Set rating limit for returns data objects
 var rating = "pg";
 // Set array of recommended search queries 
-var recArray = ["Puppies", "Kitten", "Birds", "Huskies"];
+var recArray = ["Puppies", "Kitten", "Dog", "Huskies", "Cat", "Dance", "Sweet","Bernie", "Fallon"];
 
 $(document).ready(function () {
 // Create buttons for recommended search queries, class="gif-btn rec-btn"
@@ -23,7 +23,7 @@ $(document).ready(function () {
     // Giphy api request query= button.data-name
     // Prepends still images to "#gif-box", class="loaded-gif"
     $(document).on("click", ".gif-btn", function () {
-        let query = "funny+"+$(this).data("name");
+        let query = $(this).data("name");
         console.log('query:', query);
         let queryUrl = giphyUrl + "&q=" + query + "&rating=" + rating + "&limit=" + limit;
         $.ajax({
