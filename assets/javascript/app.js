@@ -2,7 +2,7 @@
 const apiKey = "75ba12d6350f4824ac414e0486808405";
 const giphyUrl = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=" + apiKey;
 // Set limit for number of data objects returned in JSON 
-var limit = 20;                                         //  U P D A T E    T O    1 0
+var limit = 10;                                       
 // Set rating limit for returns data objects
 var rating = "pg";
 // Set array of recommended search queries 
@@ -43,7 +43,7 @@ $(document).ready(function () {
             }
         })
     })
-
+    
 // On click event for class="loaded-gif", toggles between animated and still src & data-state
     $(document).on("click", ".loaded-gif", function () {
         var state = $(this).attr("data-state");
@@ -85,7 +85,7 @@ $(document).ready(function () {
             })  
             $("#search").val(" ");
         }
-        //If input has not been searched recently, add to recentSearches and make recent searches button
+        //If input has not been searched recently, add to recentSearches array and make recent searches button
         if(e.which == 13 && recentSearches.indexOf(input)== -1) {
             let capital = input.toUpperCase();
             var recentBtn = $("<button>");
