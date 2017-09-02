@@ -2,7 +2,7 @@
 const apiKey = "75ba12d6350f4824ac414e0486808405";
 const giphyUrl = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=" + apiKey;
 // Set limit for number of data objects returned in JSON 
-var limit = 10;
+var limit = 20;                                         //  U P D A T E    T O    1 0
 // Set rating limit for returns data objects
 var rating = "pg";
 // Set array of recommended search queries 

@@ -1,34 +1,4 @@
-.navbar {
-    position: relative;
-}
-
-.page-body {
-    background-color: rgba(39, 150, 206, 0.66);
-    min-width: 100%;
-    height: 100%;
-
-    position: absolute;
-    left: 0;
-}
-
-.rec-box {
-    background-color: rgba(206, 39, 39, 0.81);
-    max-width: 300px;
-    height: 100%;
-}
-
-.recBtn {
-    display: block;
-    width: 200px;
-    margin-top: 10px;
-}
-
-.content {
-    background-color: rgba(21, 181, 32, 0.76);
-    min-width: 450px;
-}
-
-.searches-box {
-    background-color: rgba(255, 255, 0, 0.72);
+.rec-container {
     max-width: 250px;
+    float: left;
 }

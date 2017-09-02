@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Positive Gifs!</title>
-        <!-- jQuery & jQuery UI -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <!-- Javascript File -->    
-        <script src="assets/javascript/app.js"></script>   
-        <!-- CSS Reset -->
-        <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
-        <!-- Bootstrap & CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">        
-        <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css">  -->
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Positive Gifs!</title>
+    <!-- jQuery & jQuery UI -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Javascript File -->
+    <script src="assets/javascript/app.js"></script>
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <!-- CSS  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+</head>
+
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Positive Gifs</a>
@@ -24,21 +28,29 @@
             For when you just need a better day.
         </span>
     </nav>
-<div class="container page-body">
-    <div class="row">
-        <div class="col rec-box">
-            <h2>Recommended</h2>       
-        </div>
 
-        <div class="col content">
-            <h2>Search For Gifs!</h2>
-            <div id="gif-box"></div>
-        </div>
 
-        <div class="col searches-box">
-            <h2>[search box]</h2>        
+    <div class="sticky-top container rec-container">
+        <h2>Recommended</h2>
+        <ul class="nav flex-column nav-pills">
+            <li class="nav-item rec-box"></li>
+        </ul>
     </div>
-</div>
+
+<!-- Working still -->
+    <div class="container page-body">
+        <div class="row">
+            <div class="col content">
+                <h2>Search For Gifs!</h2>
+                <div id="gif-box"></div>
+            </div>
+
+            <div class="col-2 searches-box">
+                <h2>[search box]</h2>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>
