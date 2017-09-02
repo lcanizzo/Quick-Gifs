@@ -1,11 +1,15 @@
 
-// console.log('Hello');
 const apiKey = "75ba12d6350f4824ac414e0486808405";
 const giphyUrl = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=" + apiKey;
+// Set limit for number of data objects returned in JSON 
 var limit = 10;
-
+// Set rating limit for returns data objects
+var rating = "pg";
+// Set array of recommended search queries 
 var recArray = ["Puppies", "Kitten", "Birds", "Huskies"];
+
 $(document).ready(function () {
+// Create buttons for recommended search queries, class="gif-btn rec-btn"
     for (let i = 0; i < recArray.length; i++) {
         var btn = $("<button>");
         btn.addClass("btn btn-outline-secondary gif-btn rec-btn");
@@ -15,12 +19,13 @@ $(document).ready(function () {
         // console.log("data-name:", btn.data("name"))
     }
 
+// On click event for class="gif-btn" buttons in document
+    // Giphy api request query= button.data-name
+    // Prepends still images to "#gif-box", class="loaded-gif"
     $(document).on("click", ".gif-btn", function () {
-        // console.log(this);
-        let query = $(this).data("name");
-        // console.log('query:', query);
-        let queryUrl = giphyUrl + "&q=" + query +"&limit=" + limit;
-        // console.log('queryUrl:', queryUrl)
+        let query = "funny+"+$(this).data("name");
+        console.log('query:', query);
+        let queryUrl = giphyUrl + "&q=" + query + "&rating=" + rating + "&limit=" + limit;
         $.ajax({
             url: queryUrl,
             method: "GET"
@@ -39,12 +44,11 @@ $(document).ready(function () {
         })
     })
 
+// On click event for class="loaded-gif", toggles between animated and still src & data-state
     $(document).on("click", ".loaded-gif", function () {
-        // console.log("gif clicked");
         var state = $(this).attr("data-state");
         var animateUrl = $(this).attr("data-animate");
         var stillUrl = $(this).attr("data-still");
-        // console.log(state);
         if (state == "still") {
             console.log("still to animate");
             $(this).attr("data-state", "animate");
@@ -55,5 +59,7 @@ $(document).ready(function () {
             $(this).attr("src", stillUrl);
         }
     })
+
+
 
 })
