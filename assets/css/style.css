@@ -17,6 +17,12 @@
     height: 100%;
 }
 
+.recBtn {
+    display: block;
+    width: 200px;
+    margin-top: 10px;
+}
+
 .content {
     background-color: rgba(21, 181, 32, 0.76);
     min-width: 450px;
