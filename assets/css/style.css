@@ -21,4 +21,11 @@
 
 .loaded-gif {
     margin: 10px;
+    display: block;
+}
+
+.ratings {
+    float: left;
+    margin-right: 5%;
+    margin-left: 5%;
 }

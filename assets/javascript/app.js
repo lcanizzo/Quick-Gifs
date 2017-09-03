@@ -4,7 +4,7 @@ const giphyUrl = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=" +
 // Set limit for number of data objects returned in JSON 
 var limit = 10;                                       
 // Set rating limit for returns data objects
-var rating = "pg";
+var rating = "r";
 // Set array of recommended search queries 
 var recArray = ["Puppies", "Kitten", "Dog", "Huskies", "Cat"];
 var recentSearches = [];
@@ -33,13 +33,23 @@ $(document).ready(function () {
             $("#gif-box").empty();
             console.log('result:', result);
             for(let i = 0; i < result.data.length; i++) {
+                var rating = $("<p>");
+                $("#gif-box").append(rating);
+                rating.addClass("ratings badge badge-pill badge-secondary");
+                rating.text("Rated: " + result.data[i].rating.toUpperCase());
+                if (result.data[i].rating == "r") {
+                    rating.attr('class', "ratings badge badge-pill badge-danger");
+                } else if (result.data[i].rating == "pg-13") {
+                    rating.attr('class', "ratings badge badge-pill badge-warning");
+                }
+
                 var gif = $("<img>");
+                $('#gif-box').append(gif);
                 $(gif).addClass("loaded-gif");
                 $(gif).attr('src', result.data[i].images.fixed_height_still.url);
                 $(gif).attr('data-state', "still");
                 $(gif).attr('data-animate', result.data[i].images.fixed_height.url);
                 $(gif).attr('data-still', result.data[i].images.fixed_height_still.url);     
-                $('#gif-box').prepend(gif);
             }
         })
     })
@@ -74,13 +84,23 @@ $(document).ready(function () {
                 $("#gif-box").empty();
                 console.log('result:', result);
                 for(let i = 0; i < result.data.length; i++) {
+                    var rating = $("<p>");
+                    $("#gif-box").append(rating);
+                    rating.addClass("ratings badge badge-pill badge-secondary");
+                    rating.text("Rated: " + result.data[i].rating.toUpperCase());
+                    if (result.data[i].rating == "r") {
+                        rating.attr('class', "ratings badge badge-pill badge-danger");
+                    } else if (result.data[i].rating == "pg-13") {
+                        rating.attr('class', "ratings badge badge-pill badge-warning");
+                    }
+    
                     var gif = $("<img>");
+                    $('#gif-box').append(gif);
                     $(gif).addClass("loaded-gif");
                     $(gif).attr('src', result.data[i].images.fixed_height_still.url);
                     $(gif).attr('data-state', "still");
                     $(gif).attr('data-animate', result.data[i].images.fixed_height.url);
-                    $(gif).attr('data-still', result.data[i].images.fixed_height_still.url);     
-                    $('#gif-box').prepend(gif);
+                    $(gif).attr('data-still', result.data[i].images.fixed_height_still.url);   
                 }
             })  
             $("#search").val(" ");
