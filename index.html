@@ -23,35 +23,48 @@
 
 <body>
 
-    <div class="sticky-top">
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Positive Gifs</a>
-            <span class="navbar-text">
-                For when you just need a better day.
-            </span>
-            <div class="form-inline">
-                <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search For Gifs!">
-                <button id="search-button" class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    <div class="wrapper">
+
+        <div class="sticky-top">
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Positive Gifs</a>
+                <span class="navbar-text">
+                    For when you just need a better day.
+                </span>
+                <div class="form-inline">
+                    <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search For Gifs!">
+                    <button id="search-button" class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+                </div>
+            </nav>
+            
+            <div class="container rec-container">
+                <h2>Top Picks</h2>
+                <ul class="nav flex-column nav-pills">
+                    <li class="nav-item rec-box"></li>
+                </ul>
+                <h3>Recent Searches</h3>
+                <ul class="nav flex-column nav-pills">
+                    <li class="nav-item search-box"></li>
+                </ul>
             </div>
-        </nav>
-        
-        <div class="container rec-container">
-            <h2>Top Picks</h2>
-            <ul class="nav flex-column nav-pills">
-                <li class="nav-item rec-box"></li>
-            </ul>
-            <h3>Recent Searches</h3>
-            <ul class="nav flex-column nav-pills">
-                <li class="nav-item search-box"></li>
-            </ul>
         </div>
+
+        <div class="container page-body">
+            <div class="row">
+                <div class="col content">
+                    <div id="gif-box"></div>
+                </div>
+            </div>
+        </div>
+        <div class="push"></div>
     </div>
 
-    <div class="container page-body">
-        <div class="row">
-            <div class="col content">
-                <div id="gif-box"></div>
-            </div>
+    <div class="navbar navbar-default fixed-footer">
+        <div class="container center-footer">
+            <a class="navbar-nav footer-content" href="https://lcanizzo.github.io/Bootstrap-Portfolio/" target="_blank">L.Canizzo Portfolio
+            </a>
+            <p class="navbar-text footer-content" target="_blank">Copyright &copy; 2017 Luca Canizzo
+            </p>
         </div>
     </div>
 

@@ -33,3 +33,39 @@
     width: 100px;
     font-size: 13px;
 }
+
+/* F O O T E R  */
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+
+.push {
+    clear: both;
+    height: 60px;
+}
+
+.footer-content {
+    color: #444;
+    font-family:'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+} 
+
+.fixed-footer {
+    margin-top: 20px;
+    width: 100%;
+    max-height: 60px;
+}
+
+.center-footer {
+    margin: 0 auto;
+    width: 50%;
+}
