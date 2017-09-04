@@ -1,6 +1,6 @@
 
 const apiKey = "75ba12d6350f4824ac414e0486808405";
-const giphyUrl = "http://api.giphy.com/v1/gifs/search?api_key=" + apiKey;
+const giphyUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey;
 // Set limit for number of data objects returned in JSON 
 var limit = 10;                                       
 // Set rating limit for returns data objects
