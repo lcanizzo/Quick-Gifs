@@ -185,4 +185,9 @@ $("#limit-button").on("click", function(){
             console.log('recentSearches:', recentSearches);
         }
     })
+
+    //On click event for return to top button
+    $(".toTop").on('click', function(){
+        window.scrollTop(0, 0);
+    })
 })

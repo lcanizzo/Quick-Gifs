@@ -9,6 +9,14 @@
     padding-left: 5%;
 }
 
+/* T O   T O P */
+
+.toTop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
 /* P A G E  B O D Y  */
 
 .rec-container {
