@@ -172,4 +172,4 @@ $(document).ready(function () {
     })
 })
 
-//Receiving errors on Github pages (failure to load).
+//Receiving errors on Github pages (failure to load 404).
