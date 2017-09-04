@@ -11,6 +11,10 @@
     margin-top: 10px;
 } 
 
+.page-body {
+    max-width: 45%;
+}
+
 .input-box {
     padding: 0;
 }  

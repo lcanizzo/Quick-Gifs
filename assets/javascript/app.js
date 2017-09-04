@@ -121,4 +121,53 @@ $(document).ready(function () {
             console.log(recentSearches);
         }
     })
+
+    $(document).on("click", "#search-button", function () {
+        let input = $("#search").val().trim();
+        console.log(input);        
+        //Run api function
+            let queryUrl = giphyUrl + "&q=" + input + "&rating=" + rating + "&limit=" + limit;
+            console.log(queryUrl);
+            $.ajax({
+                url: queryUrl,
+                method: "GET"
+            }).done((result)=>{
+                console.log('result:', result);
+                $("#gif-box").empty();
+
+                for(let i = 0; i < result.data.length; i++) {
+                    var rating = $("<p>");
+                    $("#gif-box").append(rating);
+                    rating.addClass("ratings badge badge-pill badge-secondary");
+                    rating.text("Rated: " + result.data[i].rating.toUpperCase());
+                    if (result.data[i].rating == "r") {
+                        rating.attr('class', "ratings badge badge-pill badge-danger");
+                    } else if (result.data[i].rating == "pg-13") {
+                        rating.attr('class', "ratings badge badge-pill badge-warning");
+                    }
+    
+                    var gif = $("<img>");
+                    $('#gif-box').append(gif);
+                    $(gif).addClass("loaded-gif");
+                    $(gif).attr('src', result.data[i].images.fixed_height_still.url);
+                    $(gif).attr('data-state', "still");
+                    $(gif).attr('data-animate', result.data[i].images.fixed_height.url);
+                    $(gif).attr('data-still', result.data[i].images.fixed_height_still.url);   
+                }
+            })  
+            $("#search").val(" ");
+
+        //If input has not been searched recently, add to recentSearches array and make recent searches button
+
+        if(recentSearches.indexOf(input)== -1) {
+            let capital = input.toUpperCase();
+            var recentBtn = $("<button>");
+            recentBtn.addClass("btn btn-outline-secondary gif-btn");
+            recentBtn.attr("data-name", input);
+            recentBtn.text(capital);
+            $(".search-box").append(recentBtn);
+            recentSearches.push(input);
+            console.log(recentSearches);
+        }
+    })
 })
