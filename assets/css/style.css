@@ -1,5 +1,5 @@
 .rec-container {
-    max-width: 250px;
+    max-width: 20%;
     float: left;
     text-align: center;
 }
@@ -10,10 +10,6 @@
 
     margin-top: 10px;
 } 
-
-.page-body {
-    margin: 15px 0 10px 250px;
-}
 
 .input-box {
     padding: 0;

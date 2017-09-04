@@ -1,6 +1,6 @@
 
 const apiKey = "75ba12d6350f4824ac414e0486808405";
-const giphyUrl = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=" + apiKey;
+const giphyUrl = "http://api.giphy.com/v1/gifs/search?api_key=" + apiKey;
 // Set limit for number of data objects returned in JSON 
 var limit = 10;                                       
 // Set rating limit for returns data objects
@@ -77,12 +77,14 @@ $(document).ready(function () {
         //If "enter" pressed, run api function
         if(e.which == 13) {
             let queryUrl = giphyUrl + "&q=" + input + "&rating=" + rating + "&limit=" + limit;
+            console.log(queryUrl);
             $.ajax({
                 url: queryUrl,
                 method: "GET"
             }).done((result)=>{
-                $("#gif-box").empty();
                 console.log('result:', result);
+                $("#gif-box").empty();
+
                 for(let i = 0; i < result.data.length; i++) {
                     var rating = $("<p>");
                     $("#gif-box").append(rating);
@@ -105,7 +107,9 @@ $(document).ready(function () {
             })  
             $("#search").val(" ");
         }
+
         //If input has not been searched recently, add to recentSearches array and make recent searches button
+
         if(e.which == 13 && recentSearches.indexOf(input)== -1) {
             let capital = input.toUpperCase();
             var recentBtn = $("<button>");
