@@ -1,15 +1,21 @@
+/* N A V B A R  */
+
+#limit {
+    width: 100px;
+}
+
+.navbar-text {
+    width: 40%;
+    padding-left: 5%;
+}
+
+/* P A G E  B O D Y  */
+
 .rec-container {
     max-width: 20%;
     float: left;
     text-align: center;
 }
- 
-.gif-btn {
-    font-size: 20px;
-    width: 100%;
-
-    margin-top: 10px;
-} 
 
 .page-body {
     max-width: 45%;
@@ -18,6 +24,15 @@
 .input-box {
     padding: 0;
 }  
+
+/* L O A D E D   C O N T E N T */
+
+.gif-btn {
+    font-size: 20px;
+    width: 100%;
+
+    margin-top: 10px;
+} 
 
 .loaded-gif {
     margin: 0 auto;

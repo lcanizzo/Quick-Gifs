@@ -8,6 +8,7 @@ var rating = "r";
 // Set array of recommended search queries 
 var recArray = ["Puppies", "Kitten", "Dog", "Huskies", "Cat"];
 var recentSearches = [];
+
 $(document).ready(function () {
 // Create buttons for recommended search queries, class="gif-btn"
     for (let i = 0; i < recArray.length; i++) {
@@ -18,6 +19,22 @@ $(document).ready(function () {
         btn.text(capital);
         $(".rec-box").append(btn);
     }
+
+//Set search limit
+    //Set on enter:
+$("#limit").on("keyup", function(e){
+    let input = $(this).val().trim();
+    //If "enter" pressed, change limit number
+    if(e.which == 13) {
+        limit = input
+    }
+})
+    //Set on click:
+$("#limit-button").on("click", function(){
+    let input = $("#limit").val().trim();
+    //On "click", change limit number
+    limit = input
+})
 
 // On click event for class="gif-btn" buttons in document
     // Giphy api request query= button.data-name
@@ -50,8 +67,9 @@ $(document).ready(function () {
                 $(gif).attr('data-state', "still");
                 $(gif).attr('data-animate', result.data[i].images.fixed_height.url);
                 $(gif).attr('data-still', result.data[i].images.fixed_height_still.url);     
-            }
+            } 
         })
+        window.scrollTo(0, 0);
     })
     
 // On click event for class="loaded-gif", toggles between animated and still src & data-state
@@ -60,11 +78,9 @@ $(document).ready(function () {
         var animateUrl = $(this).attr("data-animate");
         var stillUrl = $(this).attr("data-still");
         if (state == "still") {
-            console.log("still to animate");
             $(this).attr("data-state", "animate");
             $(this).attr("src", animateUrl);
         } else if (state == "animate") {
-            console.log("animate to still");
             $(this).attr("data-state", "still");
             $(this).attr("src", stillUrl);
         }
@@ -73,11 +89,9 @@ $(document).ready(function () {
 // On keypress event for input field ("#search")
     $("#search").on("keyup", function(e){
         let input = $(this).val().trim();
-        console.log(input);        
         //If "enter" pressed, run api function
         if(e.which == 13) {
             let queryUrl = giphyUrl + "&q=" + input + "&rating=" + rating + "&limit=" + limit;
-            console.log(queryUrl);
             $.ajax({
                 url: queryUrl,
                 method: "GET"
@@ -118,13 +132,13 @@ $(document).ready(function () {
             recentBtn.text(capital);
             $(".search-box").append(recentBtn);
             recentSearches.push(input);
-            console.log(recentSearches);
+            console.log('recentSearches:', recentSearches);
         }
     })
 
+//On click event for "Search" button
     $(document).on("click", "#search-button", function () {
         let input = $("#search").val().trim();
-        console.log(input);        
         //Run api function
             let queryUrl = giphyUrl + "&q=" + input + "&rating=" + rating + "&limit=" + limit;
             console.log(queryUrl);
@@ -156,6 +170,7 @@ $(document).ready(function () {
                 }
             })  
             $("#search").val(" ");
+            window.scrollTo(0, 0);            
 
         //If input has not been searched recently, add to recentSearches array and make recent searches button
 
@@ -167,9 +182,7 @@ $(document).ready(function () {
             recentBtn.text(capital);
             $(".search-box").append(recentBtn);
             recentSearches.push(input);
-            console.log(recentSearches);
+            console.log('recentSearches:', recentSearches);
         }
     })
 })
-
-//Receiving errors on Github pages (failure to load 404).
