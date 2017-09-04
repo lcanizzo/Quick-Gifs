@@ -171,3 +171,5 @@ $(document).ready(function () {
         }
     })
 })
+
+//Receiving errors on Github pages (failure to load).
