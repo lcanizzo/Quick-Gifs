@@ -111,10 +111,10 @@ $(document).ready(function () {
                 var gif = $("<img>");
                 $('#gif-box').append(gif);
                 $(gif).addClass("loaded-gif");
-                $(gif).attr('src', result.data[i].images.fixed_height_still.url);
+                $(gif).attr('src', result.data[i].images.fixed_width_still.url);
                 $(gif).attr('data-state', "still");
-                $(gif).attr('data-animate', result.data[i].images.fixed_height.url);
-                $(gif).attr('data-still', result.data[i].images.fixed_height_still.url);
+                $(gif).attr('data-animate', result.data[i].images.fixed_width.url);
+                $(gif).attr('data-still', result.data[i].images.fixed_width_still.url);
             }
         })
         window.scrollTo(0, 0);
@@ -161,10 +161,10 @@ $(document).ready(function () {
                     var gif = $("<img>");
                     $('#gif-box').append(gif);
                     $(gif).addClass("loaded-gif");
-                    $(gif).attr('src', result.data[i].images.fixed_height_still.url);
+                    $(gif).attr('src', result.data[i].images.fixed_width_still.url);
                     $(gif).attr('data-state', "still");
-                    $(gif).attr('data-animate', result.data[i].images.fixed_height.url);
-                    $(gif).attr('data-still', result.data[i].images.fixed_height_still.url);
+                    $(gif).attr('data-animate', result.data[i].images.fixed_width.url);
+                    $(gif).attr('data-still', result.data[i].images.fixed_width_still.url);
                 }
             })
             $("#search").val(" ");
@@ -211,10 +211,10 @@ $(document).ready(function () {
                 var gif = $("<img>");
                 $('#gif-box').append(gif);
                 $(gif).addClass("loaded-gif");
-                $(gif).attr('src', result.data[i].images.fixed_height_still.url);
+                $(gif).attr('src', result.data[i].images.fixed_width_still.url);
                 $(gif).attr('data-state', "still");
-                $(gif).attr('data-animate', result.data[i].images.fixed_height.url);
-                $(gif).attr('data-still', result.data[i].images.fixed_height_still.url);
+                $(gif).attr('data-animate', result.data[i].images.fixed_width.url);
+                $(gif).attr('data-still', result.data[i].images.fixed_width_still.url);
             }
         })
         $("#search").val(" ");
