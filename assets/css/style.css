@@ -43,7 +43,7 @@
 } 
 
 .loaded-gif {
-    margin: 0 auto;
+    padding-left: 25px;
     margin-top: 10px;
     display: block;
     width: 65%;
