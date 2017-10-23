@@ -1,5 +1,5 @@
 # Positive-Gifs
-A responsive website to search through Gifs with clear Gif ratings (Y, G, PG, PG-13, R)
+A responsive web app to search through Gifs with clear Gif ratings (Y, G, PG, PG-13, R)
 
 ###### This website runs api requests and dynamically replaces content based on user input, it uses:
 - jQuery & jQuery UI
@@ -22,3 +22,6 @@ A responsive website to search through Gifs with clear Gif ratings (Y, G, PG, PG
 - The giphy api url is written as a constent to which the api key and search fields are added.
     - Api keys and urls can be easily adjusted.
 
+###### Demo:
+- User's can enter unique searches into the application.
+![App Demo Gif](./assets/gifs/new-search.gif)
