@@ -32,3 +32,11 @@ A responsive web app to search through Gifs with clear Gif ratings (Y, G, PG, PG
 ## User's can restrict their search by the max rating they want returned.
 ![App Demo Gif](./assets/gifs/max-rating.gif)
 
+If user's enter an invalid rating, they will be notified of the appropriate values and no changes to future requests will be made.
+![App Demo Gif](./assets/gifs/rating-validation.gif)
+
+## User's can set a limit for the number of results populated.
+![App Demo Gif](./assets/gifs/limit.gif)
+
+
+
