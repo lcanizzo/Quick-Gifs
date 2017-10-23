@@ -22,25 +22,25 @@ A responsive web app to search through Gifs with clear Gif ratings (Y, G, PG, PG
 - The giphy api url is written as a constent to which the api key and search fields are added.
     - Api keys and urls can be easily adjusted.
 
-###### Demo:
-## User's can enter unique searches into the application.
+## Demo:
+#### User's can enter unique searches into the application.
 ![App Demo Gif](./assets/gifs/new-search.gif)
 
-## They can also search via the applications "Top-Picks" section.
+#### They can also search via the applications "Top-Picks" section.
 ![App Demo Gif](./assets/gifs/top-picks-btn.gif)
 
-## User's can restrict their search by the max rating they want returned.
+#### User's can restrict their search by the max rating they want returned.
 ![App Demo Gif](./assets/gifs/max-rating.gif)
 
-If user's enter an invalid rating, they will be notified of the appropriate values and no changes to future requests will be made.
+#### If user's enter an invalid rating, they will be notified of the appropriate values and no changes to future requests will be made.
 ![App Demo Gif](./assets/gifs/rating-validation.gif)
 
-## User's can set a limit for the number of results populated.
+#### User's can set a limit for the number of results populated.
 ![App Demo Gif](./assets/gifs/limit.gif)
 
-## For convenience, user's can jump back to the top at any time using the "return to top" button.
+#### For convenience, user's can jump back to the top at any time using the "return to top" button.
 ![App Demo Gif](./assets/gifs/return-to-top.gif)
 
-## A user's recent searches are saved temporarily, and can be reused and filtered just like a regular search.
+#### A user's recent searches are saved temporarily, and can be reused and filtered just like a regular search.
 ![App Demo Gif](./assets/gifs/recent-searches.gif)
 
