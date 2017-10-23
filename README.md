@@ -23,5 +23,12 @@ A responsive web app to search through Gifs with clear Gif ratings (Y, G, PG, PG
     - Api keys and urls can be easily adjusted.
 
 ###### Demo:
-- User's can enter unique searches into the application.
+## User's can enter unique searches into the application.
 ![App Demo Gif](./assets/gifs/new-search.gif)
+
+## They can also search via the applications "Top-Picks" section.
+![App Demo Gif](./assets/gifs/top-picks-btn.gif)
+
+## User's can restrict their search by the max rating they want returned.
+![App Demo Gif](./assets/gifs/max-rating.gif)
+
