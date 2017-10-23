@@ -38,5 +38,9 @@ If user's enter an invalid rating, they will be notified of the appropriate valu
 ## User's can set a limit for the number of results populated.
 ![App Demo Gif](./assets/gifs/limit.gif)
 
+## For convenience, user's can jump back to the top at any time using the "return to top" button.
+![App Demo Gif](./assets/gifs/return-to-top.gif)
 
+## A user's recent searches are saved temporarily, and can be reused and filtered just like a regular search.
+![App Demo Gif](./assets/gifs/recent-searches.gif)
 
